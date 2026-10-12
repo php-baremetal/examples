@@ -1,0 +1,23 @@
+name = "power-bench"
+type = "event-driven"
+
+[esp32]
+preset = "waveshare-esp32-s3-zero"
+port   = ""
+storage_type = "embedded"
+
+[esp32.idf]
+path    = ""
+version = ""
+
+[esp32.sdk]
+path    = ""
+version = ""
+
+[esp32.storage]
+microsd = false
+
+[php]
+src     = "project-src"
+entry   = "index.php"
+version = ""

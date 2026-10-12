@@ -1,0 +1,33 @@
+name = "imu-ws-stream"
+type = "event-driven"
+
+[esp32]
+preset = "waveshare-esp32-s3-zero-n8r8"    # a WiFi-capable ESP32-S3 with a QMI8658 IMU on I2C (SDA=11/SCL=10)
+port   = ""
+storage_type = "embedded"
+
+[esp32.idf]
+path    = ""
+version = ""
+
+[esp32.sdk]
+path    = ""
+version = ""
+
+[esp32.storage]
+microsd = false
+
+[extensions.wifi]
+enabled = true
+
+[extensions.web]
+enabled = true
+
+[extensions.i2c]
+enabled = true
+drivers = ["qmi8658"]
+
+[php]
+src     = "project-src"
+entry   = "index.php"
+version = ""

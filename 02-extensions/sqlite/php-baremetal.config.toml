@@ -1,0 +1,24 @@
+name = "sqlite-notes"
+type = "init-loop"                  # execution model
+
+[esp32]
+preset = "waveshare-esp32-p4-pico"
+port   = ""          # empty = autodetect at flash time
+storage_type = "microsd"   # where the PHP source lives
+
+[esp32.idf]
+path    = ""
+version = ""
+
+[esp32.sdk]
+path    = ""
+version = ""
+
+[extensions.sqlite]
+enabled = true
+type    = "pdo-sqlite"   # PDO + the SQLite driver (default). "sqlite3" builds the SQLite3-class API
+                         # instead (~45 KB smaller, no PDO) -- see examples/sqlite3-notes.
+
+[php]
+src   = "project-src"      # PHP source folder (copied to the microSD / embedded)
+entry = "index.php"    # entry file within src

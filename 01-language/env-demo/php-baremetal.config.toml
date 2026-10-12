@@ -1,0 +1,29 @@
+name = "env-demo"
+type = "init-loop"          # setup()/loop() sketch
+
+[esp32]
+preset = "waveshare-esp32-p4-pico"
+port   = ""          # empty = autodetect at flash time
+storage_type = "embedded"   # baked into flash; the .env is compiled in too
+
+[esp32.idf]
+path    = ""
+version = ""
+
+[esp32.sdk]
+path    = ""
+version = ""
+
+[esp32.storage]
+microsd = false   # pure flash: no card needed
+
+[php]
+src     = "project-src"
+entry   = "index.php"
+version = ""
+
+# The ./.env next to this file is baked into the firmware and exposed as $_ENV / getenv().
+# It is on by default when .env exists; this block just shows the knobs:
+[env]
+enabled = true
+file    = ".env"

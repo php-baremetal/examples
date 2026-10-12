@@ -1,0 +1,27 @@
+name = "rtc-clock"
+type = "event-driven"               # a 1 Hz timer source drives the clock; no loop()
+
+[esp32]
+preset = "waveshare-esp32-s3-zero-n8r8"
+port   = ""
+storage_type = "embedded"
+
+[esp32.idf]
+path    = ""
+version = ""
+
+[esp32.sdk]
+path    = ""
+version = ""
+
+[esp32.storage]
+microsd = false
+
+[extensions.i2c]
+enabled = true
+drivers = ["pcf85063"]
+
+[php]
+src     = "project-src"
+entry   = "index.php"
+version = ""

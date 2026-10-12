@@ -1,0 +1,29 @@
+name = "display-hello"
+type = "init-loop"
+
+[esp32]
+preset = "waveshare-esp32-s3-zero-n8r8"    # any board works; the panel pins are passed at construction
+port   = ""
+storage_type = "embedded"
+
+[esp32.idf]
+path    = ""
+version = ""
+
+[esp32.sdk]
+path    = ""
+version = ""
+
+[esp32.storage]
+microsd = false
+
+# The SPI/QSPI extension: Baremetal\Spi\Bus / \Device and the Output\Display panels. `drivers`
+# selects which panel drivers are compiled into Baremetal\Spi\Driver\*.
+[extensions.spi]
+enabled = true
+drivers = ["st77916"]
+
+[php]
+src     = "project-src"
+entry   = "index.php"
+version = ""

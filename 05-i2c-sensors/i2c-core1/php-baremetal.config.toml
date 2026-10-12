@@ -1,0 +1,27 @@
+name = "i2c-core1"
+type = "init-loop"
+
+[esp32]
+preset = "waveshare-esp32-s3-zero-n8r8"    # any S3/P4 works; the I2C pins are passed at runtime
+port   = ""
+storage_type = "embedded"
+
+[esp32.idf]
+path    = ""
+version = ""
+
+[esp32.sdk]
+path    = ""
+version = ""
+
+[esp32.storage]
+microsd = false
+
+[extensions.i2c]
+enabled = true
+drivers = ["qmi8658"]
+
+[php]
+src     = "project-src"
+entry   = "index.php"
+version = ""

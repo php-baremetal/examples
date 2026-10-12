@@ -1,0 +1,19 @@
+name = "web-server"
+type = "web-server"                 # execution model: HTTP server in front, PHP per request
+
+[esp32]
+preset = "waveshare-esp32-p4-eth"    # needs the wired-Ethernet board
+port   = ""          # empty = autodetect at flash time
+storage_type = "microsd"   # where the PHP source lives
+
+[esp32.idf]
+path    = ""
+version = ""
+
+[esp32.sdk]
+path    = ""
+version = ""
+
+[php]
+src   = "project-src"      # PHP source folder (copied to the microSD / embedded)
+entry = "index.php"    # entry file within src

@@ -1,0 +1,16 @@
+# Generated per build, never committed.
+build/
+sdkconfig
+sdkconfig.old
+sdkconfig.ci
+
+# Local per-machine overrides (serial port, paths).
+*.local.toml
+
+# Composer deps are generated with `composer install`, not committed.
+vendor/
+
+# Editor / OS noise.
+.DS_Store
+.idea/
+.vscode/

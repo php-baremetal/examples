@@ -1,0 +1,22 @@
+name = "tokenizer-demo"
+type = "init-loop"
+
+[esp32]
+preset = "waveshare-esp32-p4-pico"
+port   = ""
+storage_type = "embedded"   # self-contained: source flashed in, no card needed
+
+[esp32.idf]
+path    = ""
+version = ""
+
+[esp32.sdk]
+path    = ""
+version = ""
+
+[extensions.tokenizer]
+enabled = true
+
+[php]
+src   = "project-src"
+entry = "index.php"

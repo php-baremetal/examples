@@ -1,0 +1,4 @@
+/build/
+/sdkconfig
+/project-src/vendor/
+/php-baremetal.config.local.toml

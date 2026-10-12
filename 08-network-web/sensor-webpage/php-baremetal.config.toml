@@ -1,0 +1,36 @@
+name = "sensor-webpage"
+type = "event-driven"               # resident reactor: WiFi AP + HTTP source + sensor, no per-request teardown
+
+[esp32]
+preset = "waveshare-esp32-s3-zero-n8r8"    # a WiFi-capable S3 with the magnetometer on SDA=7/SCL=8
+port   = ""
+storage_type = "embedded"
+
+[esp32.idf]
+path    = ""
+version = ""
+
+[esp32.sdk]
+path    = ""
+version = ""
+
+[esp32.storage]
+microsd = false
+
+# WiFi SoftAP so the board serves its page with no router.
+[extensions.wifi]
+enabled = true
+
+# HTTP source (Baremetal\Http\Request/Response, serve_http).
+[extensions.web]
+enabled = true
+
+# The magnetometer read on each request.
+[extensions.i2c]
+enabled = true
+drivers = ["mmc5603"]
+
+[php]
+src     = "project-src"
+entry   = "index.php"
+version = ""

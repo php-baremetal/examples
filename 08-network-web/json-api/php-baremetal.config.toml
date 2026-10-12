@@ -1,0 +1,19 @@
+name = "json-api"
+type = "web-server"                 # C HTTP server in front, PHP run fresh per request
+
+[esp32]
+preset = "waveshare-esp32-p4-eth"    # any networked board (P4-ETH / S3-ETH)
+port   = ""
+storage_type = "microsd"
+
+[esp32.idf]
+path    = ""
+version = ""
+
+[esp32.sdk]
+path    = ""
+version = ""
+
+[php]
+src   = "project-src"
+entry = "index.php"

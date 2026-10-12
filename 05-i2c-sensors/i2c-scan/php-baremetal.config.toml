@@ -1,0 +1,28 @@
+name = "i2c-scan"
+type = "init-loop"          # runs index.php once at boot
+
+[esp32]
+preset = "waveshare-esp32-s3-zero-n8r8"    # any board works; I2C pins are passed at runtime
+port   = ""          # empty = autodetect at flash time
+storage_type = "embedded"   # baked into flash; the demo needs no microSD
+
+[esp32.idf]
+path    = ""
+version = ""
+
+[esp32.sdk]
+path    = ""
+version = ""
+
+[esp32.storage]
+microsd = false   # pure flash: the SD stack isn't compiled in
+
+# The I2C extension: Baremetal\I2c\Bus and \Device. Pins are passed to the Bus constructor,
+# so nothing is configured here.
+[extensions.i2c]
+enabled = true
+
+[php]
+src     = "project-src"      # PHP source folder (baked into the image)
+entry   = "index.php"    # entry file within src
+version = ""             # empty = repo default PHP version

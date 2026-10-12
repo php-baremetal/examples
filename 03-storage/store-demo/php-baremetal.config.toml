@@ -1,0 +1,27 @@
+name = "store-demo"
+type = "init-loop"
+
+[esp32]
+preset = "waveshare-esp32-p4-pico"
+port   = ""
+storage_type = "embedded"
+
+[esp32.idf]
+path    = ""
+version = ""
+
+[esp32.sdk]
+path    = ""
+version = ""
+
+[esp32.storage]
+microsd = false
+
+[php]
+src     = "project-src"
+entry   = "index.php"
+version = ""
+
+# Reboot-persistent key-value store (store_set/store_get, NVS-backed). Give it 32 KB of flash.
+[store]
+size_kb = 32

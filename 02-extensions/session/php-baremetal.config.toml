@@ -1,0 +1,25 @@
+name = "session-demo"
+type = "init-loop"
+
+[esp32]
+preset = "waveshare-esp32-p4-pico"
+port   = ""
+storage_type = "embedded"   # source flashed in; the microSD is mounted alongside for the session files
+
+[esp32.idf]
+path    = ""
+version = ""
+
+[esp32.sdk]
+path    = ""
+version = ""
+
+[esp32.storage]
+microsd = true              # sessions need a writable filesystem -- mount the card
+
+[extensions.session]
+enabled = true
+
+[php]
+src   = "project-src"
+entry = "index.php"

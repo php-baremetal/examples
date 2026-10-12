@@ -1,0 +1,29 @@
+name = "http-events"
+type = "event-driven"
+
+[esp32]
+preset = "waveshare-esp32-s3-zero-n8r8"    # any WiFi-capable board works
+port   = ""
+storage_type = "embedded"
+
+[esp32.idf]
+path    = ""
+version = ""
+
+[esp32.sdk]
+path    = ""
+version = ""
+
+[esp32.storage]
+microsd = false
+
+[extensions.wifi]
+enabled = true
+
+[extensions.web]
+enabled = true
+
+[php]
+src     = "project-src"
+entry   = "index.php"
+version = ""

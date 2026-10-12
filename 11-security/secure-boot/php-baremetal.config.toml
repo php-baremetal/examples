@@ -1,0 +1,17 @@
+name = "secure-boot"
+type = "init-loop"
+
+[esp32]
+preset = "waveshare-esp32-s3-zero"
+port   = ""
+storage_type = "embedded"
+secure = true               # Flash Encryption (dev mode): the flash is unreadable
+secure_boot = true          # Secure Boot v2: only firmware signed with your key boots
+# secure_boot_keys_dir = "./deploys"   # where the per-unit <MAC>.pem lives (default: ./deploys)
+
+[esp32.storage]
+microsd = false
+
+[php]
+src     = "project-src"
+entry   = "index.php"

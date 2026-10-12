@@ -1,0 +1,32 @@
+name = "wifi-ap-s3-rgb-manage"
+type = "event-driven"       # resident reactor: HTTP + WebSocket as event sources (no per-request teardown)
+
+[esp32]
+preset = "waveshare-esp32-s3-zero"    # any WiFi-capable ESP32-S3 board with the onboard RGB LED
+port   = ""          # empty = autodetect at flash time
+storage_type = "embedded"   # PHP source packed into flash
+
+[esp32.idf]
+path    = ""
+version = ""
+
+[esp32.sdk]
+path    = ""
+version = ""
+
+# WiFi from PHP. index.php creates a SoftAP so the board serves its page over WiFi -- no router.
+[extensions.wifi]
+enabled = true
+
+# Addressable-LED drivers; the onboard WS2812 uses the ws2812 driver (pin passed in PHP, see init.php).
+[extensions.led]
+enabled = true
+leds    = ["ws2812"]
+
+# HTTP + WebSocket sources (Baremetal\Http\Request/Response/Message, serve_http/serve_ws, ws_broadcast).
+[extensions.web]
+enabled = true
+
+[php]
+src   = "project-src"      # PHP source folder (packed into the embedded image)
+entry = "init.php"     # runs once: brings up the AP, registers listeners, starts the server

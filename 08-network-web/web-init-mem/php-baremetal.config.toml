@@ -1,0 +1,27 @@
+name = "web-init-mem"
+type = "web-server"
+
+[esp32]
+preset = "waveshare-esp32-p4-eth"
+port   = ""
+storage_type = "embedded"
+
+[esp32.idf]
+path    = ""
+version = ""
+
+[esp32.sdk]
+path    = ""
+version = ""
+
+[esp32.storage]
+microsd = false
+
+[php]
+src     = "project-src"
+entry   = "index.php"
+version = ""
+
+# Runs once, before the HTTP server starts, for setup shared across requests (docs/mem.md).
+[web-server]
+init = "init.php"
