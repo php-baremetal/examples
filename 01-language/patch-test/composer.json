@@ -1,0 +1,39 @@
+{
+  "name": "php-baremetal-examples/patch-test",
+  "type": "project",
+  "license": "proprietary",
+  "description": "Regression checks for engine behaviour: closures, date, mbstring with regex, random and sessions.",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/php-date": "^1.0",
+    "php-baremetal/php-mbstring": "^1.0",
+    "php-baremetal/php-session": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-zero-n8r8",
+      "runtime": "init-loop",
+      "storage": "embedded",
+      "options": {
+        "mbstring-regex": true,
+        "restart-delay": 3600
+      }
+    }
+  }
+}

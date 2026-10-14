@@ -1,0 +1,36 @@
+{
+  "name": "php-baremetal-examples/web-server-init-loop",
+  "type": "project",
+  "license": "proprietary",
+  "description": "Serve over wired Ethernet in the init-loop model.",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-sys": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-p4-eth",
+      "runtime": "init-loop",
+      "storage": "microsd",
+      "options": {
+        "network": "on"
+      }
+    }
+  }
+}

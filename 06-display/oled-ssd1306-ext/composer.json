@@ -1,0 +1,38 @@
+{
+  "name": "php-baremetal-examples/oled-ssd1306-ext",
+  "type": "project",
+  "license": "proprietary",
+  "description": "Drive an SSD1306 OLED via a project-local C extension.",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    },
+    {
+      "type": "path",
+      "url": "extensions/ssd1306"
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-sys": "^1.0",
+    "php-baremetal-examples/ssd1306": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-p4-pico",
+      "runtime": "init-loop",
+      "storage": "embedded"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "php-baremetal-examples/laravel-demo-optimized",
+  "type": "project",
+  "license": "proprietary",
+  "description": "Laravel with OPcache bytecode cache on the microSD, browsable over HTTP (web-server runtime).",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/php-ctype": "^1.0",
+    "php-baremetal/php-date": "^1.0",
+    "php-baremetal/php-filter": "^1.0",
+    "php-baremetal/php-mbstring": "^1.0",
+    "php-baremetal/php-opcache": "^1.0",
+    "php-baremetal/php-openssl": "^1.0",
+    "php-baremetal/php-pdo": "^1.0",
+    "php-baremetal/php-pdo_sqlite": "^1.0",
+    "php-baremetal/php-session": "^1.0",
+    "php-baremetal/php-tokenizer": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-p4-eth",
+      "runtime": "web-server",
+      "storage": "microsd",
+      "entry": "public/index.php",
+      "options": {
+        "mbstring-regex": true,
+        "request-timeout": 120
+      }
+    }
+  }
+}

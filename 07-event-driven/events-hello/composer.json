@@ -1,0 +1,34 @@
+{
+  "name": "php-baremetal-examples/events-hello",
+  "type": "project",
+  "license": "proprietary",
+  "description": "Events::listen / dispatch fire in order (init-loop).",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-events": "^1.0",
+    "php-baremetal/ext-sys": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-zero-n8r8",
+      "runtime": "init-loop",
+      "storage": "embedded"
+    }
+  }
+}

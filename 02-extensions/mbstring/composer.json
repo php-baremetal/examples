@@ -1,0 +1,37 @@
+{
+  "name": "php-baremetal-examples/mbstring",
+  "type": "project",
+  "license": "proprietary",
+  "description": "mbstring multibyte string functions on bare metal.",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/php-mbstring": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-zero-n8r8",
+      "runtime": "init-loop",
+      "storage": "embedded",
+      "options": {
+        "mbstring-regex": true,
+        "restart-delay": 3600
+      }
+    }
+  }
+}

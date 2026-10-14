@@ -1,0 +1,34 @@
+{
+  "name": "php-baremetal-examples/i2c-core1",
+  "type": "project",
+  "license": "proprietary",
+  "description": "Read the QMI8658 IMU from the core-1 poller (driver package).",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-i2c": "^1.0",
+    "php-baremetal/imu-qmi8658": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-touch-lcd-1.85b",
+      "runtime": "init-loop",
+      "storage": "embedded"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "php-baremetal-examples/i2c-scan",
+  "type": "project",
+  "license": "proprietary",
+  "description": "Scan the I2C bus and print the addresses found.",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-i2c": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-touch-lcd-1.85b",
+      "runtime": "init-loop",
+      "storage": "embedded",
+      "options": {
+        "restart-delay": 3600
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "php-baremetal-examples/ssd1306",
+  "description": "SSD1306 128x32 OLED driver as a PHP extension (ssd1306_* functions, hardware I2C).",
+  "version": "1.0.0",
+  "type": "bm-ext",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.3"
+  },
+  "extra": {
+    "baremetal": {
+      "module": "ssd1306",
+      "idf-requires": ["esp_driver_i2c"]
+    }
+  }
+}

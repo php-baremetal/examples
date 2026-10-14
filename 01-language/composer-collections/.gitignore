@@ -1,0 +1,5 @@
+/.phpbm/
+/vendor/
+/composer.lock
+.env
+/project-src/vendor/

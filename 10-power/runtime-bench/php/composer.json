@@ -1,0 +1,33 @@
+{
+    "name": "php-baremetal-examples/runtime-bench",
+    "type": "project",
+    "license": "proprietary",
+    "description": "Board current in four 30 s phases (idle, busy, light sleep, deep sleep), to compare with the same bench in C, MicroPython and TinyGo.",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repository.php-baremetal.com",
+            "canonical": true
+        }
+    ],
+    "require": {
+        "php-baremetal/conductor": "^1.0",
+        "php-baremetal/ext-sys": "^1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-baremetal/conductor": true
+        },
+        "platform": {
+            "php": "8.5.11"
+        }
+    },
+    "extra": {
+        "baremetal": {
+            "sdk": "esp32@^2.0",
+            "board": "waveshare-esp32-s3-zero",
+            "runtime": "init-loop",
+            "storage": "embedded"
+        }
+    }
+}

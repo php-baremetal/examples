@@ -1,0 +1,35 @@
+{
+  "name": "php-baremetal-examples/s3-rgb-show",
+  "type": "project",
+  "license": "proprietary",
+  "description": "Cycle colours on the on-board WS2812 RGB LED.",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-sys": "^1.0",
+    "php-baremetal/ext-led": "^1.0",
+    "php-baremetal/led-ws2812": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-zero-n8r8",
+      "runtime": "init-loop",
+      "storage": "embedded"
+    }
+  }
+}

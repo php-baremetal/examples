@@ -1,0 +1,32 @@
+{
+  "name": "php-baremetal-examples/web-server",
+  "type": "project",
+  "license": "proprietary",
+  "description": "Per-request PHP behind the C HTTP server (web-server SAPI).",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-p4-eth",
+      "runtime": "web-server",
+      "storage": "microsd"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "php-baremetal-examples/imu-ws-stream",
+  "type": "project",
+  "license": "MIT",
+  "description": "Stream QMI8658 IMU samples to a browser over WebSocket.",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-events": "^1.0",
+    "php-baremetal/ext-i2c": "^1.0",
+    "php-baremetal/imu-qmi8658": "^1.0",
+    "php-baremetal/ext-wifi": "^1.0",
+    "php-baremetal/ext-web": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.12"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-touch-lcd-1.85b",
+      "runtime": "event-driven",
+      "storage": "embedded"
+    }
+  }
+}

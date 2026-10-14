@@ -1,0 +1,35 @@
+{
+  "name": "php-baremetal-examples/sd-write",
+  "type": "project",
+  "license": "proprietary",
+  "description": "Write and read back a file on a mounted microSD.",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-p4-pico",
+      "runtime": "init-loop",
+      "storage": "microsd",
+      "options": {
+        "restart-delay": 3600
+      }
+    }
+  }
+}

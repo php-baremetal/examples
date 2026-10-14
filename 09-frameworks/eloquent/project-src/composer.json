@@ -1,0 +1,14 @@
+{
+    "name": "php-baremetal-examples/eloquent-app",
+    "description": "Standalone Eloquent (illuminate/database) on a Waveshare ESP32-P4 board, without Laravel",
+    "require": {
+        "php": ">=8.2",
+        "illuminate/database": "^11.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.5.11"
+        }
+    }
+}

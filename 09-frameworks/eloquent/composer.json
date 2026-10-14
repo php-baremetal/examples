@@ -1,0 +1,42 @@
+{
+  "name": "php-baremetal-examples/eloquent",
+  "type": "project",
+  "license": "proprietary",
+  "description": "Standalone Eloquent models CRUD against SQLite on a microSD, on a Waveshare ESP32-P4 board.",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/php-ctype": "^1.0",
+    "php-baremetal/php-date": "^1.0",
+    "php-baremetal/php-filter": "^1.0",
+    "php-baremetal/php-mbstring": "^1.0",
+    "php-baremetal/php-pdo": "^1.0",
+    "php-baremetal/php-pdo_sqlite": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-p4-pico",
+      "runtime": "init-loop",
+      "storage": "microsd",
+      "options": {
+        "mbstring-cjk": false,
+        "restart-delay": 3600
+      }
+    }
+  }
+}

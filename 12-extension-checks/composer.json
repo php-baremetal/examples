@@ -1,0 +1,49 @@
+{
+  "name": "php-baremetal-examples/extension-checks",
+  "type": "project",
+  "license": "proprietary",
+  "description": "All optional PHP extensions with functional checks (91), including PCRE lookaheads that break if the engine loses -fno-strict-aliasing.",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-sys": "^1.0",
+    "php-baremetal/php-bcmath": "^1.0",
+    "php-baremetal/php-ctype": "^1.0",
+    "php-baremetal/php-date": "^1.0",
+    "php-baremetal/php-filter": "^1.0",
+    "php-baremetal/php-mbstring": "^1.0",
+    "php-baremetal/php-opcache": "^1.0",
+    "php-baremetal/php-openssl": "^1.0",
+    "php-baremetal/php-pdo": "^1.0",
+    "php-baremetal/php-pdo_sqlite": "^1.0",
+    "php-baremetal/php-session": "^1.0",
+    "php-baremetal/php-sqlite3": "^1.0",
+    "php-baremetal/php-tokenizer": "^1.0",
+    "php-baremetal/php-zlib": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-eth",
+      "runtime": "init-loop",
+      "storage": "embedded",
+      "options": {
+        "mbstring-regex": true
+      }
+    }
+  }
+}

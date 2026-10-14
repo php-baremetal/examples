@@ -1,0 +1,34 @@
+{
+  "name": "php-baremetal-examples/power-bench",
+  "type": "project",
+  "license": "proprietary",
+  "description": "Measure power across active, light sleep and deep sleep with sys_light_sleep() and sys_deep_sleep().",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-events": "^1.0",
+    "php-baremetal/ext-sys": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-zero",
+      "runtime": "event-driven",
+      "storage": "embedded"
+    }
+  }
+}

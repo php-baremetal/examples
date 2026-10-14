@@ -11,30 +11,24 @@
     }
   ],
   "require": {
-    "php-baremetal/ext-events": "^1.0",
-    "php-baremetal/ext-sys": "^1.0",
-    "php-baremetal/ext-hello": "^1.0"
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-hello": "^1.0",
+    "php-baremetal/ext-sys": "^1.0"
   },
   "config": {
     "allow-plugins": {
       "php-baremetal/conductor": true
     },
     "platform": {
-      "php": "8.5.10"
+      "php": "8.5.11"
     }
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "extra": {
     "baremetal": {
-      "platform": "esp32",
-      "__NOTE": "for ESP32-S3 boards pick the family matching the module PSRAM: esp32-s3/quad (e.g. 4MB flash / 2MB quad PSRAM, like the S3-Zero) or esp32-s3/octal (e.g. 8-16MB / octal PSRAM, like -N8R8/-N16R8)",
-      "family": "esp32-s3/quad",
-      "console": "usb-jtag",
-      "type": "init-loop",
-      "storage": {
-        "type": "embedded"
-      }
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-zero-n8r8",
+      "runtime": "init-loop",
+      "storage": "embedded"
     }
   }
 }

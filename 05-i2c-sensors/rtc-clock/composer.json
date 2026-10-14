@@ -1,0 +1,35 @@
+{
+  "name": "php-baremetal-examples/rtc-clock",
+  "type": "project",
+  "license": "proprietary",
+  "description": "A 1 Hz timer source drives a clock read from the PCF85063 RTC.",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-events": "^1.0",
+    "php-baremetal/ext-i2c": "^1.0",
+    "php-baremetal/rtc-pcf85063": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-touch-lcd-1.85b",
+      "runtime": "event-driven",
+      "storage": "embedded"
+    }
+  }
+}

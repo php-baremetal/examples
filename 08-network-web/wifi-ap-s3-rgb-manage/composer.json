@@ -1,0 +1,38 @@
+{
+  "name": "php-baremetal-examples/wifi-ap-s3-rgb-manage",
+  "type": "project",
+  "license": "proprietary",
+  "description": "HTTP + WebSocket page drives the on-board RGB LED.",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-events": "^1.0",
+    "php-baremetal/ext-wifi": "^1.0",
+    "php-baremetal/ext-web": "^1.0",
+    "php-baremetal/ext-led": "^1.0",
+    "php-baremetal/led-ws2812": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-zero-n8r8",
+      "runtime": "event-driven",
+      "storage": "embedded",
+      "entry": "init.php"
+    }
+  }
+}
