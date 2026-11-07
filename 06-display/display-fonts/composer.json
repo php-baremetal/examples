@@ -1,0 +1,50 @@
+{
+  "name": "php-baremetal-examples/display-fonts",
+  "type": "project",
+  "license": "proprietary",
+  "description": "Text on the ST77916 panel with the four font sources: default, baked from a TTF, project-fonts and a font package.",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-sys": "^1.0",
+    "php-baremetal/ext-spi": "^1.0",
+    "php-baremetal/esp32-display-st77916": "^1.0",
+    "php-baremetal/ext-display": "^1.0",
+    "php-baremetal/font-dejavu": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-touch-lcd-1.85b",
+      "runtime": "init-loop",
+      "storage": "embedded",
+      "fonts": {
+        "default": true,
+        "dir": "project-fonts",
+        "bake": [
+          {
+            "name": "title",
+            "source": "fonts-src/DejaVuSans.ttf",
+            "size": 28,
+            "bpp": 2,
+            "chars": "Città 21°C"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "php-baremetal-examples/timer-control",
+  "type": "project",
+  "license": "proprietary",
+  "description": "A repeating timer controlled from the BOOT button: click stops and starts it, double click doubles its period.",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-events": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-touch-lcd-1.85b",
+      "runtime": "event-driven",
+      "storage": "embedded"
+    }
+  }
+}

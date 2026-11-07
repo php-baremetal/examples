@@ -1,0 +1,33 @@
+{
+  "name": "php-baremetal-examples/gpio-multi",
+  "type": "project",
+  "license": "proprietary",
+  "description": "Two pins watched with one watch_gpios() call, delivered as one Key event class carrying the pin, the level and the delivery time.",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-events": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-touch-lcd-1.85b",
+      "runtime": "event-driven",
+      "storage": "embedded"
+    }
+  }
+}

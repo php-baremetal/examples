@@ -1,0 +1,36 @@
+{
+  "name": "php-baremetal-examples/display-hello-event-driven",
+  "type": "project",
+  "license": "proprietary",
+  "description": "display-hello in the event-driven runtime: each frame is drawn on the ST77916 round panel of the Waveshare ESP32-S3-Touch-LCD-1.85B, paced by the panel's TE pin (onVsync).",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-spi": "^1.0",
+    "php-baremetal/esp32-display-st77916": "^1.0",
+    "php-baremetal/ext-display": "^1.0",
+    "php-baremetal/ext-events": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-touch-lcd-1.85b",
+      "runtime": "event-driven",
+      "storage": "embedded"
+    }
+  }
+}

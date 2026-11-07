@@ -51,13 +51,13 @@ Examples with a nested app (`composer-collections`, `eloquent`, the framework de
 `rtc-clock`
 
 ### 06 · Display
-`display-hello` · `oled-ssd1306-fps` · `oled-ssd1306-ext`
+`display-hello` · `display-hello-event-driven` · `display-vsync` · `display-fonts` · `oled-ssd1306-fps` · `oled-ssd1306-ext`
 
 ### 07 · Event-driven
-`event-driven-hello` · `events-hello` · `button-led-events` · `http-events` · `gpio-interrupt`
+`event-driven-hello` · `events-hello` · `button-led-events` · `gpio-multi` · `timer-control` · `http-events` · `gpio-interrupt`
 
 ### 08 · Network & web
-`web-server` · `web-server-init-loop` · `web-init-mem` · `wifi-connect` · `wifi-ap` ·
+`web-server` · `web-server-init-loop` · `web-init-mem` · `wifi-connect` · `wifi-events` · `wifi-ap` ·
 `wifi-ap-s3-rgb-manage` · `json-api` · `sensor-webpage`
 
 ### 09 · Frameworks

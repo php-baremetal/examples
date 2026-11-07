@@ -2,7 +2,7 @@
   "name": "php-baremetal-examples/display-hello",
   "type": "project",
   "license": "proprietary",
-  "description": "Fill the ST77916 QSPI panel with colour (esp32-display-st77916 driver).",
+  "description": "Draw shapes and text on the ST77916 round panel of the Waveshare ESP32-S3-Touch-LCD-1.85B, then animate with region flushes.",
   "repositories": [
     {
       "type": "composer",
@@ -12,9 +12,9 @@
   ],
   "require": {
     "php-baremetal/conductor": "^1.0",
-    "php-baremetal/ext-sys": "^1.0",
     "php-baremetal/ext-spi": "^1.0",
-    "php-baremetal/esp32-display-st77916": "^1.0"
+    "php-baremetal/esp32-display-st77916": "^1.0",
+    "php-baremetal/ext-display": "^1.0"
   },
   "config": {
     "allow-plugins": {

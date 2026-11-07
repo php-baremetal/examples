@@ -24,7 +24,7 @@ Events::listen(BootPressed::class, function (BootPressed $e): void {
     echo "  BOOT button pressed!\n";
 });
 
-every(10000, Tick::class);          // a Tick every second (timer source)
+every(1000, Tick::class);           // a Tick every second (timer source)
 watch_gpio(0, BootPressed::class); // GPIO0 = the BOOT button (falling edge, debounced)
 
 echo "event-driven: registered listeners + sources; the reactor now blocks on the queue\n";
