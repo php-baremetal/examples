@@ -1,0 +1,40 @@
+{
+  "name": "php-baremetal-examples/slate-hello",
+  "type": "project",
+  "license": "proprietary",
+  "description": "Slate scenes on the round panel of the Waveshare ESP32-S3-Touch-LCD-1.85B: a card with a gradient and a shadow, a ring, lines, text, a translucent group, a blurred group, a canvas, and a second page reached by touch.",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-spi": "^1.0",
+    "php-baremetal/esp32-display-st77916": "^1.2",
+    "php-baremetal/ext-display": "^1.1",
+    "php-baremetal/ext-events": "^1.2",
+    "php-baremetal/ext-i2c": "^1.1.1",
+    "php-baremetal/ext-input": "^1.0",
+    "php-baremetal/touch-cst816s": "^1.0",
+    "php-baremetal/ext-slate": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-touch-lcd-1.85b",
+      "runtime": "event-driven",
+      "storage": "embedded"
+    }
+  }
+}

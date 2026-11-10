@@ -1,0 +1,44 @@
+{
+  "name": "php-baremetal-examples/slate-gauge",
+  "type": "project",
+  "license": "proprietary",
+  "description": "A Slate gauge driven by the tilt of the QMI8658 IMU at 100 Hz, with a dot orbiting at 60 Hz and the slate-debug profiler (frames per second on screen and a line of timings per second on the console).",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-spi": "^1.0",
+    "php-baremetal/esp32-display-st77916": "^1.2",
+    "php-baremetal/ext-display": "^1.1",
+    "php-baremetal/ext-events": "^1.2",
+    "php-baremetal/ext-i2c": "^1.1.1",
+    "php-baremetal/ext-input": "^1.0",
+    "php-baremetal/touch-cst816s": "^1.0",
+    "php-baremetal/ext-slate": "^1.0",
+    "php-baremetal/imu-qmi8658": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-touch-lcd-1.85b",
+      "runtime": "event-driven",
+      "storage": "embedded",
+      "options": {
+        "slate-debug": true
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "php-baremetal-examples/touch-paint",
+  "type": "project",
+  "license": "proprietary",
+  "description": "Paint with a finger on the round panel of the Waveshare ESP32-S3-Touch-LCD-1.85B: a CST816S touch controller raises Pressed, Moved and Gesture events; a double tap clears, a swipe changes the colour.",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repository.php-baremetal.com",
+      "canonical": true
+    }
+  ],
+  "require": {
+    "php-baremetal/conductor": "^1.0",
+    "php-baremetal/ext-spi": "^1.0",
+    "php-baremetal/esp32-display-st77916": "^1.0",
+    "php-baremetal/ext-display": "^1.0",
+    "php-baremetal/ext-events": "^1.1",
+    "php-baremetal/ext-i2c": "^1.1.1",
+    "php-baremetal/ext-input": "^1.0",
+    "php-baremetal/touch-cst816s": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-baremetal/conductor": true
+    },
+    "platform": {
+      "php": "8.5.11"
+    }
+  },
+  "extra": {
+    "baremetal": {
+      "sdk": "esp32@^2.0",
+      "board": "waveshare-esp32-s3-touch-lcd-1.85b",
+      "runtime": "event-driven",
+      "storage": "embedded"
+    }
+  }
+}

@@ -51,7 +51,7 @@ Examples with a nested app (`composer-collections`, `eloquent`, the framework de
 `rtc-clock`
 
 ### 06 · Display
-`display-hello` · `display-hello-event-driven` · `display-vsync` · `display-fonts` · `oled-ssd1306-fps` · `oled-ssd1306-ext`
+`display-hello` · `display-hello-event-driven` · `display-vsync` · `display-fonts` · `touch-paint` · `slate-hello` · `slate-gauge` · `slate-stress` · `slate-bench` · `oled-ssd1306-fps` · `oled-ssd1306-ext`
 
 ### 07 · Event-driven
 `event-driven-hello` · `events-hello` · `button-led-events` · `gpio-multi` · `timer-control` · `http-events` · `gpio-interrupt`
